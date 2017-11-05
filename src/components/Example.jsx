@@ -18,11 +18,21 @@ import EndCallback from './EndCallback';
 
 
 const iframe = '<iframe width="300" height="215"src="https://www.youtube.com/embed/R-w2cgTtELQ?ecver=1"></iframe>';
+const iframe1 = '<iframe width="300" height="215" src="https://www.youtube.com/embed/Rf-dI3EiPF0?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>';
+const iframe2 = '<iframe width="300" height="215" src="https://www.youtube.com/embed/9mqA8M2fILA" frameborder="0" gesture="media" allowfullscreen></iframe>';
+
+const iframes = {
+  iframe : iframe,
+  iframe1: iframe1,
+  iframe2: iframe2
+}
+
+
 
 
 const ThemedExample = () => (
   <ThemeProvider theme = { otherFontTheme }>
-    <EndCallback iframe ={iframe} />
+    <EndCallback iframe ={iframe} iframes= {iframes} />
   </ThemeProvider>
 );
 

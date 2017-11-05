@@ -143,7 +143,7 @@ class EndCallback extends React.Component {
             id: "programVolunteerOptions",
             options: [
               { value: 1, label: 'How does it work?', trigger: "programHow1" },
-              { value: 2, "programSkills1": 'What skills are needed?', trigger: 6 },
+              { value: 2, label:'What skills are needed?', trigger: "programSkills1" },
               { value: 3, label: 'Time commitment?', trigger: "programTimeCommitment" },
               { value: 4, label: 'How do I sign up?', trigger: "signUp" }
             ],
@@ -374,7 +374,7 @@ class EndCallback extends React.Component {
           {
             id: 'crystal5',
             message: 'She is exploring working as a Peer, and has completed the Wellness Recovery and Action Plan (WRAP), to become a Peer Facilitator.',
-            trigger: 'crystal5'            
+            trigger: 'crystal6'            
           },
           {
             id: 'crystal6',
@@ -471,17 +471,32 @@ class EndCallback extends React.Component {
           //TODO
           {
             id: 'programVideo',
-            message: 'business".',
+            component: (
+              <div>
+              <iframe {...getAttrs(this.props.iframes.iframe1) } />
+           </div> 
+              
+            ),
             trigger: 'bye'            
           },
           {
             id: 'kitchenVideo',
-            message: 'business".',
+            component: (
+              <div>
+              <iframe {...getAttrs(this.props.iframes.iframe1) } />
+           </div> 
+              
+            ),
             trigger: 'bye'            
           },
           {
             id: 'womenVideo',
-            message: 'business".',
+            component: (
+              <div>
+              <iframe {...getAttrs(this.props.iframes.iframe) } />
+           </div> 
+              
+            ),
             trigger: 'bye'            
           },
   
