@@ -119,12 +119,10 @@ const steps = [
   },
 ];
 
-const ThemedExample = () => ( <
-  ThemeProvider theme = { otherFontTheme } >
-  <
-  ChatBot steps = { steps }
-  /> <
-  /ThemeProvider>
+const ThemedExample = () => (
+  <ThemeProvider theme = { otherFontTheme }>
+    <ChatBot steps = { steps }/>
+  </ThemeProvider>
 );
 
 export default ThemedExample;
