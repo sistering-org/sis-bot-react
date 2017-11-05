@@ -22,7 +22,7 @@ const iframe = '<iframe width="300" height="215"src="https://www.youtube.com/emb
 
 const ThemedExample = () => (
   <ThemeProvider theme = { otherFontTheme }>
-    <EndCallback iframe ={iframe}/>
+    <EndCallback iframe ={iframe} />
   </ThemeProvider>
 );
 
