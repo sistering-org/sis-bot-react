@@ -1,5 +1,5 @@
 const path = require('path');
-
+const webpack = require('webpack');
 module.exports = {
   entry: path.resolve(__dirname, 'src/main.jsx'),
   output: {
@@ -15,7 +15,11 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  plugins: [],
+  plugins: [
+    new webpack.ProvidePlugin({
+      "React": "react",
+    })
+  ],
   devtool: 'source-map',
   module: {
     rules: [
