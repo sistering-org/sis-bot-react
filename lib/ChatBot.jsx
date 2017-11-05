@@ -610,7 +610,7 @@ ChatBot.propTypes = {
 
 ChatBot.defaultProps = {
   avatarStyle: {},
-  botDelay: 1000,
+  botDelay: 2000,
   bubbleStyle: {},
   cache: false,
   cacheName: 'rsc_cache',
@@ -618,7 +618,7 @@ ChatBot.defaultProps = {
   contentStyle: {},
   customStyle: {},
   customDelay: 1000,
-  floating: false,
+  floating: true,
   footerStyle: {},
   handleEnd: undefined,
   headerComponent: undefined,
