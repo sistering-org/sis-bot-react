@@ -15,9 +15,24 @@ const getAttrs = (iframeTag) => {
     }, {});
 }
 
+var dataurl="https://ancient-meadow-87555.herokuapp.com/api";
+var stepdata={};
+
 class EndCallback extends React.Component {
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        allSteps: {},
+      };
+
+      this.runconsole = this.runconsole.bind(this);
+
+    }
+
   componentDidMount() {
     this.handleEnd = this.handleEnd.bind(this);
+    this.runconsole();
   }
 
   // iframe () {
@@ -29,7 +44,19 @@ class EndCallback extends React.Component {
   handleEnd({ steps, values }) {
    
   }
-
+  runconsole(){
+    fetch(dataurl)
+      .then(function(response) {
+        if (response.status >= 400) {
+          throw new Error("Bad response from server");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({"allSteps": data});
+      });
+      console.log(this.state)
+  }
   render() {
     return (
        <div className="docs-example-1">
