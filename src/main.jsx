@@ -1,16 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Example from './components/Example';
+import ThemedChat from './components/ThemedChat';
 
 
 class Apps extends React.Component {
 
   render() {
-    return (
-      
-          
-          <Example/>
-
+    return (     
+          <ThemedChat/>
     );
   }
 }

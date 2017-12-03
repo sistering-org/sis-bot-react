@@ -1,0 +1,39 @@
+{
+    "steps" : [
+         {
+            "id": "1",
+            "message": "Hi there",
+            "trigger": "dedicatedVolunteers"
+          },
+          {
+            "id": "dedicatedVolunteers",
+            "message": "Without our dedicated team of volunteers, we wouldn’t be able to offer the programs and activities participants have come to count on.",
+            "trigger": "noHesitate"
+          },
+          {
+            "id": "noHesitate",
+            "message": "So don\"t hesitate to learn more about our opportunities",
+            "trigger": "noHesitateOptions"
+          },
+          {
+            "id": "noHesitateOptions",
+            "options": [
+              { "value": 1, "label": "Who you're helping", "trigger": "womenDesc1" },
+              { "value": 2, "label": "Becoming a volunteer", "trigger": "becomeVolunteerDesc" }
+            ]
+          },
+          {
+             "id": "womenDesc1",
+             "message": "<iframe width=\"300\" height=\"215\"src=\"https://www.youtube.com/embed/R-w2cgTtELQ?ecver=1\"></iframe>",
+             "iframe" : true,
+             "end": true
+          },
+          {
+             "id": "becomeVolunteerDesc",
+             "message": "<iframe width=\"300\" height=\"215\" src=\"https://www.youtube.com/embed/Rf-dI3EiPF0?ecver=1\" frameBorder=\"0\" gesture=\"media\" allowFullScreen></iframe>",
+             "iframe" : true,
+             "end": true
+          }
+
+    ]
+}
